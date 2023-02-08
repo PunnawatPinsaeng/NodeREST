@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/CRUDBookNoDB.js",
+    "dev": "nodemon src/CRUDBookNoDB.js",
     "format": "prettier --write *.js"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/PunnawatPinsaeng/NodeREST#readme",
   "devDependencies": {
+    "nodemon": "^2.0.20",
     "prettier": "^2.8.3"
   },
   "dependencies": {
