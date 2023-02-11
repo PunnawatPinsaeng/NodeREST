@@ -54,7 +54,7 @@ app.post('/books' , (req , res) => {
     const book = {
 
         id : books.length + 1 , 
-        title : req.book.title ,
+        title : req.body.title ,
         author : req.body.author
     };
 
@@ -65,7 +65,7 @@ app.post('/books' , (req , res) => {
 // route to update a book
 app.put('/books/:id' , (req , res) => {
 
-    const book = book.find(b => b.id === parseInt(req.params.id));
+    const book = books.find(b => b.id === parseInt(req.params.id));
     if (!book) res.status(404).send('Book not found');
     book.title = req.body.title;
     book.author = req.body.author;
@@ -82,5 +82,5 @@ app.delete('/books/:id' , (req , res) => {
     res.send(book);
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 app.listen(port , () => console.log(`Listening on port ${port}...`));
