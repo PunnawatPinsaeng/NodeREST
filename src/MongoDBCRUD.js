@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 // ! Database connection
 mongoose.connect(
-    'mongodb://admin:SBFsqa14913@node407321-noderest.proen.app.ruk-com.cloud:11344' ,
+    'mongodb://admin:SBFsqa14913@node42074-punnawat.proen.app.ruk-com.cloud:11354' ,
 
     {
         useNewUrlParser : true ,
